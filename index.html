@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Citrion — Tinted Peptide Lip Care</title>
+    <meta
+      name="description"
+      content="Citrion makes peptide-infused tinted lip balms for effortless color and care."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fdfaf2;
+        --accent: #e8c84a;
+        --text: #1c1c1c;
+        --muted: rgba(28, 28, 28, 0.72);
+        --border: rgba(28, 28, 28, 0.16);
+        --shadow: 0 10px 30px rgba(28, 28, 28, 0.08);
+        --radius: 18px;
+        --max: 1120px;
+        --pad: clamp(18px, 3.2vw, 34px);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.45;
+        text-rendering: geometricPrecision;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        transform: translateY(-140%);
+        transition: transform 180ms ease;
+        z-index: 9999;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+        outline: none;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: transparent;
+        border-bottom: 1px solid rgba(28, 28, 28, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+        gap: 16px;
+      }
+
+      .brand {
+        letter-spacing: 0.22em;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav li + li::before {
+        content: "·";
+        color: rgba(28, 28, 28, 0.42);
+        margin-right: 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+        color: var(--muted);
+        position: relative;
+        padding: 8px 2px;
+        transition: color 180ms ease, transform 180ms ease;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 4px;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 220ms ease;
+        opacity: 0.7;
+      }
+
+      nav a:hover {
+        color: var(--text);
+        transform: translateY(-1px);
+      }
+
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+
+      main {
+        min-height: 100svh;
+      }
+
+      .hero {
+        min-height: calc(100svh - 72px);
+        display: grid;
+        place-items: center;
+        padding: clamp(44px, 7vw, 92px) 0;
+      }
+
+      .hero-inner {
+        width: min(860px, 100%);
+        text-align: center;
+        padding: 0 6px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(28, 28, 28, 0.72);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin: 0 0 18px;
+      }
+
+      .kicker::before,
+      .kicker::after {
+        content: "";
+        height: 1px;
+        width: 34px;
+        background: rgba(28, 28, 28, 0.18);
+      }
+
+      h1,
+      h2 {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: clamp(46px, 6.2vw, 82px);
+        line-height: 1.02;
+      }
+
+      .hero p {
+        margin: 18px auto 0;
+        max-width: 46ch;
+        color: var(--muted);
+        font-size: clamp(16px, 2.1vw, 18px);
+      }
+
+      .cta-row {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(28, 28, 28, 0.2);
+        background: transparent;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        transition: transform 180ms ease, box-shadow 220ms ease,
+          background-color 220ms ease, border-color 220ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+        border-color: rgba(28, 28, 28, 0.28);
+      }
+
+      .btn-primary {
+        background: var(--accent);
+        border-color: rgba(28, 28, 28, 0.18);
+      }
+
+      .btn-primary:hover {
+        background: color-mix(in srgb, var(--accent) 92%, white);
+      }
+
+      section {
+        padding: clamp(60px, 7vw, 92px) 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+        margin-bottom: clamp(22px, 3.2vw, 34px);
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: clamp(30px, 3.5vw, 44px);
+        line-height: 1.08;
+      }
+
+      .section-subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        max-width: 52ch;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: clamp(14px, 2.4vw, 22px);
+      }
+
+      .card {
+        grid-column: span 6;
+        border: 1px solid rgba(28, 28, 28, 0.14);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: rgba(253, 250, 242, 0.6);
+        transition: transform 200ms ease, box-shadow 240ms ease,
+          border-color 240ms ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: rgba(28, 28, 28, 0.22);
+      }
+
+      .img-placeholder {
+        aspect-ratio: 1 / 1;
+        background: var(--accent);
+        position: relative;
+      }
+
+      .img-placeholder::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          1200px 400px at 50% -20%,
+          rgba(255, 255, 255, 0.45),
+          rgba(255, 255, 255, 0) 58%
+        );
+        opacity: 0.95;
+      }
+
+      .card-body {
+        padding: 16px 16px 18px;
+        display: grid;
+        gap: 6px;
+      }
+
+      .product-name {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+      }
+
+      .product-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .shade {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .price {
+        color: rgba(28, 28, 28, 0.86);
+        font-weight: 500;
+      }
+
+      .about-copy {
+        max-width: 70ch;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .about-copy p {
+        margin: 0 0 14px;
+      }
+
+      .about-copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      form {
+        width: min(760px, 100%);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        font-size: 13px;
+        color: rgba(28, 28, 28, 0.72);
+      }
+
+      input,
+      textarea {
+        font: inherit;
+        color: var(--text);
+        background: rgba(253, 250, 242, 0.8);
+        border: 1px solid rgba(28, 28, 28, 0.18);
+        border-radius: 14px;
+        padding: 12px 12px;
+        outline: none;
+        transition: border-color 200ms ease, box-shadow 220ms ease,
+          transform 200ms ease;
+      }
+
+      textarea {
+        min-height: 140px;
+        resize: vertical;
+        padding: 12px 12px;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: rgba(28, 28, 28, 0.34);
+        box-shadow: 0 0 0 4px rgba(232, 200, 74, 0.22);
+      }
+
+      .form-grid .full {
+        grid-column: 1 / -1;
+      }
+
+      .form-actions {
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
+
+      .helper {
+        margin: 0;
+        color: rgba(28, 28, 28, 0.62);
+        font-size: 13px;
+      }
+
+      footer {
+        padding: 34px 0 44px;
+        border-top: 1px solid rgba(28, 28, 28, 0.1);
+        text-align: center;
+        color: rgba(28, 28, 28, 0.66);
+        font-size: 13px;
+      }
+
+      @media (max-width: 860px) {
+        .card {
+          grid-column: span 12;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .nav {
+          height: auto;
+          padding: 14px 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+
+        nav ul {
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .hero {
+          min-height: calc(100svh - 92px);
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+      <div class="container">
+        <div class="nav" aria-label="Primary">
+          <a class="brand" href="#top" aria-label="Citrion home">CITRION</a>
+          <nav>
+            <ul>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-label="Hero">
+        <div class="container">
+          <div class="hero-inner">
+            <p class="kicker">Peptide tint • everyday care</p>
+            <h1>Lip care, elevated.</h1>
+            <p>
+              Peptide-infused tinted lip balms for effortless color and care.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#products">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" aria-label="Products">
+        <div class="container">
+          <div class="section-head">
+            <h2>The Collection</h2>
+          </div>
+
+          <div class="products-grid">
+            <article class="card" aria-label="Citrion Glaze Honey Dew">
+              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="card-body">
+                <div class="product-name">Citrion Glaze</div>
+                <div class="product-meta">
+                  <span class="shade">Shade: Honey Dew</span>
+                  <span class="price">$18</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Citrion Glaze Rose Petal">
+              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="card-body">
+                <div class="product-name">Citrion Glaze</div>
+                <div class="product-meta">
+                  <span class="shade">Shade: Rose Petal</span>
+                  <span class="price">$18</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Citrion Glaze Berry Bliss">
+              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="card-body">
+                <div class="product-name">Citrion Glaze</div>
+                <div class="product-meta">
+                  <span class="shade">Shade: Berry Bliss</span>
+                  <span class="price">$18</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" aria-label="Citrion Glaze Nude Crush">
+              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="card-body">
+                <div class="product-name">Citrion Glaze</div>
+                <div class="product-meta">
+                  <span class="shade">Shade: Nude Crush</span>
+                  <span class="price">$18</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" aria-label="About">
+        <div class="container">
+          <div class="section-head">
+            <h2>About Citrion</h2>
+          </div>
+
+          <div class="about-copy">
+            <p>
+              Citrion was born from a simple belief — that lip care should feel
+              luxurious, effortless, and effective. Each glaze is infused with
+              peptides and botanical extracts to nourish while delivering a wash
+              of buildable color.
+            </p>
+            <p>Clean formulas. Thoughtful ingredients. Made for every day.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-label="Contact">
+        <div class="container">
+          <div class="section-head">
+            <h2>Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you.</p>
+          </div>
+
+          <form method="POST" action="https://formspree.io/f/mzdjzgne">
+            <div class="form-grid">
+              <label>
+                Name
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+
+              <label>
+                Email
+                <input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+
+              <label class="full">
+                Message
+                <textarea name="message" required></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Citrion. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
