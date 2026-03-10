@@ -335,6 +335,16 @@
           rgba(255, 255, 255, 0) 58%
         );
         opacity: 0.95;
+        pointer-events: none;
+      }
+
+      .img-placeholder img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .card-body {
@@ -535,7 +545,9 @@
 
           <div class="products-grid">
             <article class="card" aria-label="Citrion Glaze Honey Dew">
-              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="img-placeholder">
+                <img src="images/Honey%20Dew.png" alt="Citrion Glaze — Honey Dew" />
+              </div>
               <div class="card-body">
                 <div class="product-name">Citrion Glaze</div>
                 <div class="product-meta">
@@ -546,7 +558,12 @@
             </article>
 
             <article class="card" aria-label="Citrion Glaze Rose Petal">
-              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="img-placeholder">
+                <img
+                  src="images/Rose%20Petal.png"
+                  alt="Citrion Glaze — Rose Petal"
+                />
+              </div>
               <div class="card-body">
                 <div class="product-name">Citrion Glaze</div>
                 <div class="product-meta">
@@ -557,7 +574,12 @@
             </article>
 
             <article class="card" aria-label="Citrion Glaze Berry Bliss">
-              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="img-placeholder">
+                <img
+                  src="images/Berry%20Bliss.png"
+                  alt="Citrion Glaze — Berry Bliss"
+                />
+              </div>
               <div class="card-body">
                 <div class="product-name">Citrion Glaze</div>
                 <div class="product-meta">
@@ -568,7 +590,12 @@
             </article>
 
             <article class="card" aria-label="Citrion Glaze Nude Crush">
-              <div class="img-placeholder" aria-hidden="true"></div>
+              <div class="img-placeholder">
+                <img
+                  src="images/Nude%20Crush.png"
+                  alt="Citrion Glaze — Nude Crush"
+                />
+              </div>
               <div class="card-body">
                 <div class="product-name">Citrion Glaze</div>
                 <div class="product-meta">
