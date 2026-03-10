@@ -320,6 +320,15 @@
         );
       }
 
+      .avatar img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
       .team-name {
         font-weight: 500;
         font-size: 15px;
@@ -558,7 +567,9 @@
             </article>
 
             <article class="team-card">
-              <div class="avatar" aria-hidden="true"></div>
+              <div class="avatar">
+                <img src="images/keang.png" alt="Keang Liu" />
+              </div>
               <p class="team-name">Keang Liu</p>
               <p class="team-role">CMO</p>
             </article>
