@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ═══ SEO: Core ═══ -->
+    <title>About Citrion | ICBSC Brand Strategy Project — Keang Liu, UCR AGSM</title>
+    <meta name="description" content="Citrion is a brand strategy project developed by Keang Liu for the International Collegiate Business Strategy Competition (ICBSC) at UCR Anderson Graduate School of Management.">
+    <meta name="robots" content="index, follow">
+    <script>
+      if (window.location.hostname === 'liukeang-sys.github.io') {
+        document.querySelector('meta[name="robots"]').setAttribute('content', 'noindex, nofollow');
+      }
+    </script>
+    <link rel="canonical" href="https://citrion.site/about.html">
+
+    <!-- ═══ GA4 ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CXZMHNN8T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0CXZMHNN8T');
+    </script>
+
+    <!-- ═══ SEO: Open Graph ═══ -->
+    <meta property="og:title" content="About Citrion | ICBSC Brand Strategy Project">
+    <meta property="og:description" content="Citrion is a brand strategy project developed by Keang Liu for the International Collegiate Business Strategy Competition (ICBSC) at UCR AGSM.">
+    <meta property="og:url" content="https://citrion.site/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Citrion">
+
+    <!-- ═══ SEO: Schema Markup ═══ -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "About Citrion — ICBSC Brand Strategy Entry",
+  "url": "https://citrion.site/about.html",
+  "description": "Citrion is a brand strategy project developed for the International Collegiate Business Strategy Competition (ICBSC) by Keang Liu, MBA Candidate at UCR Anderson Graduate School of Management.",
+  "author": {
+    "@type": "Person",
+    "name": "Keang Liu",
+    "url": "https://keangliu.com",
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "University of California, Riverside — Anderson Graduate School of Management"
+    }
+  },
+  "about": {
+    "@type": "Event",
+    "name": "International Collegiate Business Strategy Competition (ICBSC)",
+    "organizer": {
+      "@type": "Organization",
+      "name": "UCR Anderson Graduate School of Management"
+    }
+  }
+}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fdfaf2;
+        --accent: #e8c84a;
+        --text: #1c1c1c;
+        --muted: rgba(28, 28, 28, 0.72);
+        --border: rgba(28, 28, 28, 0.16);
+        --shadow: 0 10px 30px rgba(28, 28, 28, 0.08);
+        --radius: 18px;
+        --max: 1120px;
+        --pad: clamp(18px, 3.2vw, 34px);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.45;
+        text-rendering: geometricPrecision;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        transform: translateY(-140%);
+        transition: transform 180ms ease;
+        z-index: 9999;
+      }
+      .skip-link:focus { transform: translateY(0); outline: none; }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(253, 250, 242, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(28, 28, 28, 0.08);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+        gap: 16px;
+      }
+
+      .brand {
+        letter-spacing: 0.22em;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav li + li::before {
+        content: "·";
+        color: rgba(28, 28, 28, 0.42);
+        margin-right: 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+        color: var(--muted);
+        position: relative;
+        padding: 8px 2px;
+        transition: color 180ms ease, transform 180ms ease;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0; right: 0; bottom: 4px;
+        height: 1px;
+        background: currentColor;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 220ms ease;
+        opacity: 0.7;
+      }
+
+      nav a:hover { color: var(--text); transform: translateY(-1px); }
+      nav a:hover::after { transform: scaleX(1); }
+      nav a.active { color: var(--text); }
+      nav a.active::after { transform: scaleX(1); }
+
+      main { min-height: 100svh; }
+
+      /* ── Page hero ── */
+      .page-hero {
+        padding: clamp(64px, 8vw, 108px) 0 clamp(48px, 6vw, 80px);
+        border-bottom: 1px solid rgba(28, 28, 28, 0.08);
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: rgba(28, 28, 28, 0.72);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin: 0 0 18px;
+      }
+
+      .kicker::before, .kicker::after {
+        content: "";
+        height: 1px;
+        width: 34px;
+        background: rgba(28, 28, 28, 0.18);
+      }
+
+      h1, h2 {
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      h1 {
+        font-weight: 500;
+        font-size: clamp(42px, 5.8vw, 74px);
+        line-height: 1.04;
+        max-width: 16ch;
+      }
+
+      .page-hero-sub {
+        margin: 16px 0 0;
+        color: var(--muted);
+        font-size: clamp(16px, 2vw, 18px);
+        max-width: 54ch;
+      }
+
+      /* ── Sections ── */
+      section {
+        padding: clamp(52px, 6.5vw, 80px) 0;
+      }
+
+      section + section {
+        border-top: 1px solid rgba(28, 28, 28, 0.08);
+      }
+
+      .section-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+        margin-bottom: clamp(22px, 3.2vw, 34px);
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: clamp(28px, 3.2vw, 42px);
+        line-height: 1.08;
+      }
+
+      /* ── Two-column layout ── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+
+      .prose {
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 58ch;
+      }
+
+      .prose p { margin: 0 0 16px; }
+      .prose p:last-child { margin-bottom: 0; }
+
+      /* ── Info card ── */
+      .info-card {
+        border: 1px solid rgba(28, 28, 28, 0.12);
+        border-radius: var(--radius);
+        padding: clamp(22px, 3vw, 32px);
+        background: rgba(253, 250, 242, 0.6);
+      }
+
+      .info-card-title {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(28, 28, 28, 0.5);
+        margin: 0 0 18px;
+      }
+
+      .info-row {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .info-item {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 10px;
+        align-items: baseline;
+        font-size: 14px;
+      }
+
+      .info-label {
+        color: rgba(28, 28, 28, 0.48);
+        font-size: 13px;
+      }
+
+      .info-value {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .info-divider {
+        height: 1px;
+        background: rgba(28, 28, 28, 0.08);
+        margin: 4px 0;
+      }
+
+      /* ── Process timeline ── */
+      .timeline {
+        display: grid;
+        gap: 0;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 18px;
+        padding-bottom: 36px;
+        position: relative;
+      }
+
+      .timeline-item:last-child { padding-bottom: 0; }
+
+      .timeline-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 1.5px solid rgba(28, 28, 28, 0.2);
+        margin-top: 5px;
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
+      }
+
+      .timeline-item:not(:last-child) .timeline-dot::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: calc(100% + 26px);
+        background: rgba(28, 28, 28, 0.1);
+      }
+
+      .timeline-body {
+        padding-top: 0;
+      }
+
+      .timeline-phase {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(28, 28, 28, 0.44);
+        margin: 0 0 4px;
+      }
+
+      .timeline-title {
+        font-weight: 500;
+        font-size: 15px;
+        margin: 0 0 6px;
+        color: var(--text);
+      }
+
+      .timeline-desc {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* ── Creator card ── */
+      .creator-card {
+        border: 1px solid rgba(28, 28, 28, 0.12);
+        border-radius: var(--radius);
+        padding: clamp(22px, 3vw, 32px);
+        background: rgba(253, 250, 242, 0.6);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .creator-name {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: clamp(22px, 2.4vw, 28px);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+
+      .creator-title {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .creator-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(28, 28, 28, 0.7);
+        border: 1px solid rgba(28, 28, 28, 0.18);
+        border-radius: 999px;
+        padding: 7px 14px;
+        transition: transform 180ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        width: fit-content;
+      }
+
+      .creator-link:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+        border-color: rgba(28, 28, 28, 0.28);
+        color: var(--text);
+      }
+
+      .creator-link svg {
+        width: 13px;
+        height: 13px;
+        opacity: 0.6;
+      }
+
+      /* ── Back link ── */
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--muted);
+        transition: color 180ms ease, transform 180ms ease;
+        margin-bottom: clamp(28px, 4vw, 48px);
+      }
+
+      .back-link:hover { color: var(--text); transform: translateX(-2px); }
+
+      .back-link svg { width: 14px; height: 14px; }
+
+      /* ── Footer ── */
+      footer {
+        padding: 34px 0 44px;
+        border-top: 1px solid rgba(28, 28, 28, 0.1);
+        text-align: center;
+        color: rgba(28, 28, 28, 0.52);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      footer a {
+        color: rgba(28, 28, 28, 0.66);
+        border-bottom: 1px solid rgba(28, 28, 28, 0.18);
+        transition: color 160ms ease, border-color 160ms ease;
+      }
+
+      footer a:hover { color: var(--text); border-color: rgba(28, 28, 28, 0.4); }
+
+      /* ── Responsive ── */
+      @media (max-width: 720px) {
+        .two-col { grid-template-columns: 1fr; }
+        .nav {
+          height: auto;
+          padding: 14px 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+        }
+        nav ul { gap: 14px; flex-wrap: wrap; }
+        .info-item { grid-template-columns: 90px 1fr; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; animation: none !important; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header>
+      <div class="container">
+        <div class="nav" aria-label="Primary">
+          <a class="brand" href="index.html" aria-label="Citrion home">CITRION</a>
+          <nav>
+            <ul>
+              <li><a href="index.html#products">Products</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+              <li><a href="analytics.html">Competition Data</a></li>
+              <li><a href="investors.html">Investors</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <div class="page-hero">
+        <div class="container">
+          <a class="back-link" href="index.html">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 2L4 7l5 5"/>
+            </svg>
+            Back to Citrion
+          </a>
+          <p class="kicker">Brand strategy · Competition entry</p>
+          <h1>Behind the brand.</h1>
+          <p class="page-hero-sub">
+            Citrion was created as a brand strategy entry for the International Collegiate Business Strategy Competition (ICBSC), hosted by UCR Anderson Graduate School of Management.
+          </p>
+        </div>
+      </div>
+
+      <!-- About the project -->
+      <section aria-labelledby="project-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="project-heading">The project</h2>
+          </div>
+          <div class="two-col">
+            <div class="prose">
+              <p>
+                Citrion is a fictional clean beauty brand developed from the ground up as part of the <strong>ICBSC — International Collegiate Business Strategy Competition</strong>, organized by the UCR Anderson Graduate School of Management (UCR AGSM).
+              </p>
+              <p>
+                The brief called for a complete go-to-market strategy: brand identity, target market analysis, pricing model, digital marketing plan, and a live product website. Citrion was the answer — a peptide-infused tinted lip balm positioned at the intersection of clean beauty and accessible luxury.
+              </p>
+              <p>
+                Every element of this site — from the product copy to the SEO structure — was intentionally designed and built as part of the competition deliverable.
+              </p>
+            </div>
+
+            <div class="info-card" aria-label="Project details">
+              <p class="info-card-title">Project details</p>
+              <div class="info-row">
+                <div class="info-item">
+                  <span class="info-label">Competition</span>
+                  <span class="info-value">ICBSC 2025</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                  <span class="info-label">Full name</span>
+                  <span class="info-value">International Collegiate Business Strategy Competition</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                  <span class="info-label">Host</span>
+                  <span class="info-value">UCR Anderson Graduate School of Management</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                  <span class="info-label">Category</span>
+                  <span class="info-value">Brand strategy &amp; digital marketing</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                  <span class="info-label">Brand</span>
+                  <span class="info-value">Citrion — Peptide Tinted Lip Balm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Strategy overview -->
+      <section aria-labelledby="strategy-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="strategy-heading">Strategy overview</h2>
+          </div>
+          <div class="two-col">
+            <div class="timeline" role="list">
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <p class="timeline-phase">Step 01</p>
+                  <p class="timeline-title">Market &amp; consumer research</p>
+                  <p class="timeline-desc">Identified a gap in the clean beauty lip care segment — consumers wanted both performance and ingredient transparency. Citrion was positioned to own that space.</p>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <p class="timeline-phase">Step 02</p>
+                  <p class="timeline-title">Brand identity &amp; product development</p>
+                  <p class="timeline-desc">Developed the Citrion name, visual language, and product line — four shades of the Glaze peptide tinted lip balm at an accessible $18 price point.</p>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <p class="timeline-phase">Step 03</p>
+                  <p class="timeline-title">Digital presence &amp; SEO</p>
+                  <p class="timeline-desc">Built a fully functional product site with on-page SEO, schema markup, Google Analytics integration, and Google Search Console configuration — treated as a real launch.</p>
+                </div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                  <p class="timeline-phase">Step 04</p>
+                  <p class="timeline-title">Go-to-market strategy</p>
+                  <p class="timeline-desc">Outlined a phased GTM plan covering organic search, social content, and a retail partnership framework — benchmarked against comparable clean beauty brands.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="creator-card" aria-label="Created by">
+              <p class="info-card-title">Created by</p>
+              <p class="creator-name">Keang Liu</p>
+              <p class="creator-title">
+                MBA Candidate, Class of 2026<br>
+                UCR Anderson Graduate School of Management<br>
+                Digital Marketing · SEO/SEM · Brand Strategy
+              </p>
+              <div class="info-divider"></div>
+              <p style="font-size:14px; color:var(--muted); margin:0; line-height:1.6;">
+                Keang Liu specializes in digital marketing strategy, SEO/SEM, and Google Analytics. Citrion was developed as part of the UCR AGSM competition curriculum and is featured in his marketing portfolio.
+              </p>
+              <a class="creator-link" href="https://keangliu.com/icbsc.html" target="_blank" rel="noopener">
+                View full ICBSC project
+                <svg viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 11L11 2M11 2H6M11 2v5"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p style="margin:0 0 6px;">© 2026 Citrion. All rights reserved.</p>
+        <p style="margin:0;">
+          A brand strategy project by <a href="https://keangliu.com" target="_blank" rel="noopener">Keang Liu</a> for the
+          <a href="https://keangliu.com/icbsc.html" target="_blank" rel="noopener">International Collegiate Business Strategy Competition (ICBSC)</a>,
+          UCR Anderson Graduate School of Management.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
