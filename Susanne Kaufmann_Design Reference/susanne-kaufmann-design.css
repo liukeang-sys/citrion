@@ -1,0 +1,27 @@
+@theme {
+  /* Colors */
+  --color-primary-dark: #1e1e1e;
+  --color-pure-white: #ffffff;
+  --color-warm-neutral: #f2eeeb;
+  --color-true-black: #000000;
+  --color-light-gray: #e6e6e6;
+  --color-accent-purple: #4d384b;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 60px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+
+  /* Fonts */
+  --font-kaufmannsans: "KaufmannSans", sans-serif;
+  --font-martina-plantijn: "Martina Plantijn", sans-serif;
+  --font-source-sans-pro: "Source Sans Pro", sans-serif;
+
+}

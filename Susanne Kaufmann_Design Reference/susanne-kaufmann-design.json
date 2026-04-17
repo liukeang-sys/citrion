@@ -1,0 +1,129 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": "Susanne Kaufmann",
+  "style": "Alpine Minimalism",
+  "colors": {
+    "Primary Dark": {
+      "value": "#1e1e1e",
+      "role": "text",
+      "usage": "Primary text color, navigation, and headings"
+    },
+    "Pure White": {
+      "value": "#ffffff",
+      "role": "background",
+      "usage": "Main background, cards, and content areas"
+    },
+    "Warm Neutral": {
+      "value": "#f2eeeb",
+      "role": "background",
+      "usage": "Secondary background, subtle sections"
+    },
+    "True Black": {
+      "value": "#000000",
+      "role": "text",
+      "usage": "High contrast text and accents"
+    },
+    "Light Gray": {
+      "value": "#e6e6e6",
+      "role": "border",
+      "usage": "Subtle borders and dividers"
+    },
+    "Accent Purple": {
+      "value": "#4d384b",
+      "role": "accent",
+      "usage": "Interactive elements and brand accents"
+    }
+  },
+  "typography": {
+    "Body Text": {
+      "fontFamily": "KaufmannSans",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "18.2px",
+      "letterSpacing": "0.28px",
+      "role": "Primary body text and navigation"
+    },
+    "Heading Large": {
+      "fontFamily": "Martina Plantijn",
+      "fontSize": "32px",
+      "fontWeight": "400",
+      "lineHeight": "37.12px",
+      "letterSpacing": "normal",
+      "role": "Main headings and hero text"
+    },
+    "Body Secondary": {
+      "fontFamily": "Martina Plantijn",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "lineHeight": "18px",
+      "letterSpacing": "0.3px",
+      "role": "Secondary body text and descriptions"
+    },
+    "Label": {
+      "fontFamily": "KaufmannSans",
+      "fontSize": "12px",
+      "fontWeight": "400",
+      "lineHeight": "13.92px",
+      "letterSpacing": "0.24px",
+      "role": "Labels, captions, and small text"
+    },
+    "Button Text": {
+      "fontFamily": "KaufmannSans",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "lineHeight": "15px",
+      "letterSpacing": "0.28px",
+      "role": "Button labels and call-to-action text"
+    }
+  },
+  "spacing": {
+    "xs": {
+      "value": "4px",
+      "px": 4
+    },
+    "sm": {
+      "value": "8px",
+      "px": 8
+    },
+    "md": {
+      "value": "16px",
+      "px": 16
+    },
+    "lg": {
+      "value": "20px",
+      "px": 20
+    },
+    "xl": {
+      "value": "40px",
+      "px": 40
+    },
+    "2xl": {
+      "value": "60px",
+      "px": 60
+    }
+  },
+  "borderRadius": {
+    "sm": {
+      "value": "8px",
+      "px": 8
+    },
+    "md": {
+      "value": "10px",
+      "px": 10
+    }
+  },
+  "fonts": [
+    {
+      "family": "KaufmannSans",
+      "source": "custom"
+    },
+    {
+      "family": "Martina Plantijn",
+      "source": "custom"
+    },
+    {
+      "family": "Source Sans Pro",
+      "source": "google"
+    }
+  ]
+}

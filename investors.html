@@ -1,628 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
-    <title>Citrion — Investors</title>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-0CXZMHNN8T"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-0CXZMHNN8T");
-    </script>
-    <meta
-    name="description"
-    content="Learn about Citrion's mission, values, team, and investor information."
-  />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+
+  <title>Investors — Citrion Industries</title>
+  <meta name="description" content="Investor relations for Citrion Industries. Mission, values, team, and financial reports." />
   <meta name="robots" content="noindex, nofollow">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- ═══ GA4 ═══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CXZMHNN8T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0CXZMHNN8T');
+  </script>
 
-    <style>
-      :root {
-        --bg: #fdfaf2;
-        --accent: #e8c84a;
-        --text: #1c1c1c;
-        --muted: rgba(28, 28, 28, 0.72);
-        --border: rgba(28, 28, 28, 0.16);
-        --shadow: 0 10px 30px rgba(28, 28, 28, 0.08);
-        --radius: 18px;
-        --max: 1120px;
-        --pad: clamp(18px, 3.2vw, 34px);
-      }
+  <!-- ═══ Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 
-      * {
-        box-sizing: border-box;
-      }
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      html {
-        scroll-behavior: smooth;
-      }
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      body {
-        margin: 0;
-        font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.45;
-        text-rendering: geometricPrecision;
-      }
+  <!-- ── Navigation ── -->
+  <header class="site-header solid" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html" aria-label="Citrion Industries — home">Citrion Industries</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html#pillars">About</a>
+          <a href="analytics.html">Analytics</a>
+          <a href="investors.html" class="active">Investors</a>
+          <a href="about.html">Project</a>
+        </nav>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
+  <!-- Mobile menu -->
+  <nav class="nav-mobile" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html#pillars">About</a>
+    <a href="analytics.html">Analytics</a>
+    <a href="investors.html">Investors</a>
+    <a href="about.html">Project</a>
+  </nav>
 
-      .container {
-        max-width: var(--max);
-        margin: 0 auto;
-        padding: 0 var(--pad);
-      }
+  <main id="main">
 
-      .skip-link {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        padding: 10px 12px;
-        background: var(--bg);
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        transform: translateY(-140%);
-        transition: transform 180ms ease;
-        z-index: 9999;
-      }
-
-      .skip-link:focus {
-        transform: translateY(0);
-        outline: none;
-      }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        background: transparent;
-        border-bottom: 1px solid rgba(28, 28, 28, 0.08);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 72px;
-        gap: 16px;
-      }
-
-      .brand {
-        letter-spacing: 0.22em;
-        font-weight: 500;
-        font-size: 14px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        padding: 0;
-        margin: 0;
-      }
-
-      nav li + li::before {
-        content: "·";
-        color: rgba(28, 28, 28, 0.42);
-        margin-right: 12px;
-      }
-
-      nav a {
-        font-size: 14px;
-        color: var(--muted);
-        position: relative;
-        padding: 8px 2px;
-        transition: color 180ms ease, transform 180ms ease;
-      }
-
-      nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 4px;
-        height: 1px;
-        background: currentColor;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 220ms ease;
-        opacity: 0.7;
-      }
-
-      nav a:hover {
-        color: var(--text);
-        transform: translateY(-1px);
-      }
-
-      nav a:hover::after {
-        transform: scaleX(1);
-      }
-
-      main {
-        min-height: 100svh;
-      }
-
-      section {
-        padding: clamp(60px, 7vw, 92px) 0;
-      }
-
-      h1,
-      h2 {
-        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-        letter-spacing: -0.02em;
-        margin: 0;
-      }
-
-      h1 {
-        font-weight: 500;
-        font-size: clamp(40px, 4.6vw, 64px);
-        line-height: 1.05;
-      }
-
-      h2 {
-        font-weight: 500;
-        font-size: clamp(30px, 3.5vw, 44px);
-        line-height: 1.08;
-      }
-
-      .page-intro {
-        padding-top: clamp(40px, 6vw, 70px);
-        padding-bottom: clamp(20px, 3vw, 30px);
-      }
-
-      .page-intro-inner {
-        max-width: 720px;
-      }
-
-      .kicker {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: rgba(28, 28, 28, 0.72);
-        font-size: 12px;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        margin: 0 0 16px;
-      }
-
-      .kicker::before,
-      .kicker::after {
-        content: "";
-        height: 1px;
-        width: 34px;
-        background: rgba(28, 28, 28, 0.18);
-      }
-
-      .lead {
-        margin: 12px 0 0;
-        max-width: 52ch;
-        color: var(--muted);
-        font-size: 16px;
-      }
-
-      .section-head {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 18px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid rgba(28, 28, 28, 0.1);
-        margin-bottom: clamp(22px, 3.2vw, 34px);
-      }
-
-      .section-subtitle {
-        margin: 0;
-        color: var(--muted);
-        font-size: 14px;
-        max-width: 52ch;
-      }
-
-      .mission-copy {
-        max-width: 70ch;
-        color: var(--muted);
-        font-size: 16px;
-      }
-
-      .values-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(14px, 2.4vw, 22px);
-      }
-
-      .value-card {
-        border-radius: var(--radius);
-        border: 1px solid rgba(28, 28, 28, 0.14);
-        background: rgba(253, 250, 242, 0.7);
-        padding: 20px 20px 22px;
-        box-shadow: 0 0 0 1px rgba(253, 250, 242, 0.4);
-        transition: transform 200ms ease, box-shadow 240ms ease,
-          border-color 240ms ease;
-      }
-
-      .value-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow);
-        border-color: rgba(28, 28, 28, 0.22);
-      }
-
-      .value-title {
-        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-        font-size: 24px;
-        letter-spacing: 0.02em;
-        margin: 0 0 8px;
-      }
-
-      .value-body {
-        margin: 0;
-        font-size: 14px;
-        color: var(--muted);
-      }
-
-      .team-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(14px, 2.4vw, 22px);
-      }
-
-      .team-card {
-        border-radius: var(--radius);
-        border: 1px solid rgba(28, 28, 28, 0.14);
-        background: rgba(253, 250, 242, 0.7);
-        padding: 20px 20px 22px;
-        text-align: center;
-        transition: transform 200ms ease, box-shadow 240ms ease,
-          border-color 240ms ease;
-      }
-
-      .team-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow);
-        border-color: rgba(28, 28, 28, 0.22);
-      }
-
-      .avatar {
-        width: 64px;
-        height: 64px;
-        border-radius: 999px;
-        margin: 0 auto 14px;
-        background: var(--accent);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .avatar::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          120px 80px at 50% -10%,
-          rgba(255, 255, 255, 0.4),
-          rgba(255, 255, 255, 0)
-        );
-      }
-
-      .avatar img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 35%;
-        display: block;
-      }
-
-      .team-name {
-        font-weight: 500;
-        font-size: 15px;
-        margin: 0 0 4px;
-      }
-
-      .team-role {
-        margin: 0;
-        font-size: 13px;
-        color: var(--muted);
-      }
-
-      .reports-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: clamp(14px, 2.4vw, 22px);
-      }
-
-      .report-card {
-        border-radius: var(--radius);
-        border: 1px solid rgba(28, 28, 28, 0.14);
-        background: rgba(253, 250, 242, 0.86);
-        padding: 18px 18px 20px;
-        display: grid;
-        gap: 10px;
-        align-content: start;
-        transition: transform 200ms ease, box-shadow 240ms ease,
-          border-color 240ms ease;
-      }
-
-      .report-card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow);
-        border-color: rgba(28, 28, 28, 0.22);
-      }
-
-      .doc-icon {
-        width: 32px;
-        height: 40px;
-        border-radius: 10px;
-        border: 1px solid rgba(28, 28, 28, 0.28);
-        background: linear-gradient(
-          135deg,
-          rgba(232, 200, 74, 0.45),
-          rgba(253, 250, 242, 0.9)
-        );
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-      }
-
-      .report-title {
-        margin: 0;
-        font-size: 15px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px 16px;
-        border-radius: 999px;
-        border: 1px solid rgba(28, 28, 28, 0.2);
-        background: transparent;
-        color: var(--text);
-        font-weight: 500;
-        font-size: 13px;
-        letter-spacing: 0.02em;
-        transition: transform 180ms ease, box-shadow 220ms ease,
-          background-color 220ms ease, border-color 220ms ease;
-        cursor: default;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        border-color: rgba(28, 28, 28, 0.18);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow);
-        border-color: rgba(28, 28, 28, 0.28);
-      }
-
-      .note {
-        margin: 2px 0 0;
-        font-size: 12px;
-        color: rgba(28, 28, 28, 0.6);
-      }
-
-      footer {
-        padding: 34px 0 44px;
-        border-top: 1px solid rgba(28, 28, 28, 0.1);
-        text-align: center;
-        color: rgba(28, 28, 28, 0.66);
-        font-size: 13px;
-      }
-
-      @media (max-width: 960px) {
-        .values-grid,
-        .team-grid,
-        .reports-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-
-      @media (max-width: 720px) {
-        .nav {
-          height: auto;
-          padding: 14px 0;
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 8px;
-        }
-
-        nav ul {
-          gap: 14px;
-          flex-wrap: wrap;
-        }
-
-        .values-grid,
-        .team-grid,
-        .reports-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-        * {
-          transition: none !important;
-          animation: none !important;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
-    <header>
+    <!-- ── Page Hero ── -->
+    <div class="page-hero">
       <div class="container">
-        <div class="nav" aria-label="Primary">
-          <a class="brand" href="index.html#top" aria-label="Citrion home"
-            >CITRION</a
-          >
-          <nav>
-            <ul>
-              <li><a href="index.html#products">Products</a></li>
-              <li><a href="index.html#about">About</a></li>
-              <li><a href="index.html#contact">Contact</a></li>
-              <li><a href="investors.html">Investors</a></li>
-            </ul>
-          </nav>
+        <span class="eyebrow">Investor Relations</span>
+        <h1>Investing in effortless confidence.</h1>
+        <p class="lead" style="max-width: 52ch;">
+          Discover the mission, values, and team behind Citrion — a modern consumer brand built at the intersection of clean beauty and accessible luxury.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Mission ── -->
+    <section class="section" id="mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <div class="section-label">
+          <span class="eyebrow" id="mission-heading">Mission</span>
+        </div>
+        <div class="split fade-up">
+          <div class="split-text">
+            <h2>Effortless confidence, accessible to everyone.</h2>
+            <p>
+              Citrion exists to make high-performance lip care accessible — clean ingredients, buildable color, and the kind of glow that feels like you. We believe beauty should perform, and that premium formulations don't require premium price points.
+            </p>
+          </div>
+          <div class="stat-grid" style="grid-template-columns: 1fr 1fr; background: var(--border); border: 1px solid var(--border);">
+            <div class="stat-item fade-up delay-1">
+              <span class="stat-number">$18</span>
+              <span class="stat-label">Price Point</span>
+              <p class="stat-desc">Accessible luxury positioning</p>
+            </div>
+            <div class="stat-item fade-up delay-2">
+              <span class="stat-number">4</span>
+              <span class="stat-label">Shades</span>
+              <p class="stat-desc">Inclusive shade range for all tones</p>
+            </div>
+            <div class="stat-item fade-up delay-3">
+              <span class="stat-number">SPF+</span>
+              <span class="stat-label">Protection</span>
+              <p class="stat-desc">Sun protection in every formula</p>
+            </div>
+            <div class="stat-item fade-up delay-4">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Clean</span>
+              <p class="stat-desc">Peptide-infused botanical formula</p>
+            </div>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main id="main">
-      <section class="page-intro" aria-label="Investors intro">
-        <div class="container">
-          <div class="page-intro-inner">
-            <p class="kicker">For investors</p>
-            <h1>Investing in effortless confidence.</h1>
-            <p class="lead">
-              Discover the mission, values, and team behind Citrion as we build a
-              modern lip care brand rooted in clarity, comfort, and care.
+    <!-- ── Values ── -->
+    <section class="section--sm" style="background: var(--off-white);" id="values" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-label">
+          <span class="eyebrow" id="values-heading">Values</span>
+        </div>
+        <div class="pillars-grid fade-up">
+          <div class="pillar" style="background: var(--white);">
+            <span class="pillar-number">01</span>
+            <h3>Clean</h3>
+            <p>Thoughtfully formulated with ingredients you can trust. No compromises — every component earns its place in the formula.</p>
+          </div>
+          <div class="pillar" style="background: var(--white);">
+            <span class="pillar-number">02</span>
+            <h3>Inclusive</h3>
+            <p>Made for every skin tone, every lifestyle, every day. Citrion's shade range and pricing reflect a genuine commitment to accessibility.</p>
+          </div>
+          <div class="pillar" style="background: var(--white);">
+            <span class="pillar-number">03</span>
+            <h3>Confident</h3>
+            <p>Beauty that empowers without overwhelming. Citrion is designed to enhance, not transform — the best version of you, effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Team ── -->
+    <section class="section" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-label">
+          <span class="eyebrow" id="team-heading">Leadership</span>
+        </div>
+        <div class="team-grid fade-up">
+          <div class="team-card">
+            <div class="team-avatar">
+              <img src="images/keang.png" alt="Keang Liu" />
+            </div>
+            <p class="team-name">Keang Liu</p>
+            <p class="team-role">Chief Marketing Officer</p>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: 14px;">
+              MBA Candidate at UCR AGSM. Digital marketing, SEO/SEM, and brand strategy specialist.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" aria-hidden="true"></div>
+            <p class="team-name">Shamyukta Bose</p>
+            <p class="team-role">Chief Executive Officer</p>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: 14px;">
+              Leads company vision and overall business strategy for Citrion Industries.
+            </p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar" aria-hidden="true"></div>
+            <p class="team-name">Tatenda Mukuruva</p>
+            <p class="team-role">Chief Financial Officer</p>
+            <p style="font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: 14px;">
+              Oversees financial planning, reporting, and investor relations for the brand.
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="mission" aria-label="Mission">
-        <div class="container">
-          <div class="section-head">
-            <h2>Our Mission</h2>
+    <!-- ── Financial Reports ── -->
+    <section class="section--sm" style="background: var(--off-white);" id="reports" aria-labelledby="reports-heading">
+      <div class="container">
+        <div class="section-label">
+          <span class="eyebrow" id="reports-heading">Financial Reports</span>
+          <span class="eyebrow">Transparency is at the heart of everything we do.</span>
+        </div>
+
+        <div class="doc-list fade-up">
+          <div class="doc-row">
+            <div class="doc-row-info">
+              <span class="doc-row-title">Q1 2026 Financial Report</span>
+              <span class="doc-row-meta">Quarterly · January – March 2026</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-light);">Coming Soon</span>
+              <button class="btn" type="button" disabled style="opacity: 0.4; cursor: default;">View Report</button>
+            </div>
           </div>
 
-          <p class="mission-copy">
-            Citrion exists to make effortless confidence accessible to everyone.
-            Our tinted lip glazes are designed for real life — clean
-            ingredients, buildable color, and the kind of glow that feels like
-            you.
+          <div class="doc-row">
+            <div class="doc-row-info">
+              <span class="doc-row-title">Q2 2026 Financial Report</span>
+              <span class="doc-row-meta">Quarterly · April – June 2026</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-light);">Coming Soon</span>
+              <button class="btn" type="button" disabled style="opacity: 0.4; cursor: default;">View Report</button>
+            </div>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-row-info">
+              <span class="doc-row-title">Annual Report 2026</span>
+              <span class="doc-row-meta">Annual · Full Year 2026</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-light);">Coming Soon</span>
+              <button class="btn" type="button" disabled style="opacity: 0.4; cursor: default;">View Report</button>
+            </div>
+          </div>
+
+          <div class="doc-row">
+            <div class="doc-row-info">
+              <span class="doc-row-title">ICBSC Competition Analytics</span>
+              <span class="doc-row-meta">Live Data · World 6, Company 3</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <a href="analytics.html" class="btn btn--green">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <span class="footer-brand">Citrion Industries</span>
+          <p class="footer-copy">
+            © 2026 Citrion Industries. All rights reserved.<br>
+            A brand strategy project by <a href="https://keangliu.com" target="_blank" rel="noopener">Keang Liu</a>
+            for ICBSC, UCR Anderson Graduate School of Management.
           </p>
         </div>
-      </section>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="analytics.html">Analytics</a>
+          <a href="about.html">About</a>
+          <a href="index.html">Home</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
-      <section id="values" aria-label="Values">
-        <div class="container">
-          <div class="section-head">
-            <h2>Our Values</h2>
-          </div>
-
-          <div class="values-grid">
-            <article class="value-card">
-              <h3 class="value-title">Clean</h3>
-              <p class="value-body">
-                Thoughtfully formulated with ingredients you can trust.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <h3 class="value-title">Inclusive</h3>
-              <p class="value-body">
-                Made for every skin tone, every lifestyle, every day.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <h3 class="value-title">Confident</h3>
-              <p class="value-body">
-                Beauty that empowers, never overwhelms.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="team" aria-label="Team">
-        <div class="container">
-          <div class="section-head">
-            <h2>Our Team</h2>
-          </div>
-
-          <div class="team-grid">
-            <article class="team-card">
-              <div class="avatar">
-                <img src="images/keang.png" alt="Keang Liu" />
-              </div>
-              <p class="team-name">Keang Liu</p>
-              <p class="team-role">CMO</p>
-            </article>
-
-            <article class="team-card">
-              <div class="avatar" aria-hidden="true"></div>
-              <p class="team-name">Shamyukta Bose</p>
-              <p class="team-role">CEO</p>
-            </article>
-
-            <article class="team-card">
-              <div class="avatar" aria-hidden="true"></div>
-              <p class="team-name">Tatenda Mukuruva</p>
-              <p class="team-role">CFO</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="reports" aria-label="Financial Reports">
-        <div class="container">
-          <div class="section-head">
-            <h2>Financial Reports</h2>
-            <p class="section-subtitle">
-              Transparency is at the heart of everything we do.
-            </p>
-          </div>
-
-          <div class="reports-grid">
-            <article class="report-card">
-              <div class="doc-icon" aria-hidden="true">PDF</div>
-              <h3 class="report-title">Q1 2026 Financial Report</h3>
-              <button class="btn btn-primary" type="button">View Report</button>
-              <p class="note">Coming Soon</p>
-            </article>
-
-            <article class="report-card">
-              <div class="doc-icon" aria-hidden="true">PDF</div>
-              <h3 class="report-title">Q2 2026 Financial Report</h3>
-              <button class="btn btn-primary" type="button">View Report</button>
-              <p class="note">Coming Soon</p>
-            </article>
-
-            <article class="report-card">
-              <div class="doc-icon" aria-hidden="true">PDF</div>
-              <h3 class="report-title">Annual Report 2026</h3>
-              <button class="btn btn-primary" type="button">View Report</button>
-              <p class="note">Coming Soon</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">© 2026 Citrion. All rights reserved.</div>
-    </footer>
-  </body>
+  <script src="main.js"></script>
+</body>
 </html>
-

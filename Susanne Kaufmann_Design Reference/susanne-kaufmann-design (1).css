@@ -1,0 +1,48 @@
+:root {
+  /* Colors */
+  --color-primary-dark: #1e1e1e;
+  --color-pure-white: #ffffff;
+  --color-warm-neutral: #f2eeeb;
+  --color-true-black: #000000;
+  --color-light-gray: #e6e6e6;
+  --color-accent-purple: #4d384b;
+
+  /* Typography */
+  --font-body-text-family: KaufmannSans;
+  --font-body-text-size: 14px;
+  --font-body-text-weight: 400;
+  --font-body-text-line-height: 18.2px;
+  --font-body-text-letter-spacing: 0.28px;
+  --font-heading-large-family: Martina Plantijn;
+  --font-heading-large-size: 32px;
+  --font-heading-large-weight: 400;
+  --font-heading-large-line-height: 37.12px;
+  --font-body-secondary-family: Martina Plantijn;
+  --font-body-secondary-size: 15px;
+  --font-body-secondary-weight: 400;
+  --font-body-secondary-line-height: 18px;
+  --font-body-secondary-letter-spacing: 0.3px;
+  --font-label-family: KaufmannSans;
+  --font-label-size: 12px;
+  --font-label-weight: 400;
+  --font-label-line-height: 13.92px;
+  --font-label-letter-spacing: 0.24px;
+  --font-button-text-family: KaufmannSans;
+  --font-button-text-size: 15px;
+  --font-button-text-weight: 400;
+  --font-button-text-line-height: 15px;
+  --font-button-text-letter-spacing: 0.28px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 60px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+
+}
